@@ -5,8 +5,13 @@ source 'https://rubygems.org'
 gem 'rails', '~> 5.0.0', '>= 5.0.0.1'
 # Use sqlite3 as the database for Active Record
 # Added during development
-gem 'bcrypt', '~> 3.1.7'
+# gem 'bcrypt', '~> 3.1.7'
 #Pagination gems
+gem 'devise'
+gem 'twitter-bootstrap-rails'
+gem 'therubyracer'
+gem 'devise-bootstrap-views'
+
 gem 'will_paginate', '~> 3.1.0'
 #gem 'bootstrap-will_paginate', '0.0.10'
 gem 'will_paginate-bootstrap'
