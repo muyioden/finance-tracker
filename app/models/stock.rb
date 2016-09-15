@@ -1,4 +1,6 @@
 class Stock < ApplicationRecord
+  has_many :stock_users
+  has_many :users, through: :stock_users
 
   def self.find_by(ticker_symbol)
     where(ticker: ticker_symbol).first 
