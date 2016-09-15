@@ -11,6 +11,7 @@ gem 'devise'
 gem 'twitter-bootstrap-rails'
 gem 'therubyracer'
 gem 'devise-bootstrap-views'
+gem 'stock_quote'
 
 gem 'will_paginate', '~> 3.1.0'
 #gem 'bootstrap-will_paginate', '0.0.10'
