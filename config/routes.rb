@@ -12,5 +12,6 @@ Rails.application.routes.draw do
   #Routes to user's portfolio
   get 'my_portfolio', to: "users#my_portfolio"
   get 'search_stocks', to: "stocks#search"
+  get 'my_friends', to: "users#my_friends"
 
 end
