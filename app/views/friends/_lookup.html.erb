@@ -16,13 +16,13 @@
       </div>
     </div>
   <% end %>
-  
+
   <%= render 'common/spinner' %>
-  <%#= debugger %>
+
   <% if @users %>
   
     <% if @users.size > 0 %>
-      <div id="friend-lookup-results" class="well results-block col-md-10">
+      <div id="friend-lookup-results" class="well results-block col-md-12">
         <table class="search-results-table col-md-12 ">
           <tbody>
             <% @users.each do |user| %>
