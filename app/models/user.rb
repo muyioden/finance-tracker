@@ -29,13 +29,13 @@ class User < ApplicationRecord
 
   def not_friends_with?(friend_id)
 
-    friendships.where(friend_id: friend_id)
+    friendships.where(friend_id: friend_id).count < 1
 
   end
 
   def except_current_user(users)
 
-    users.reject{ |user| user.id == self.id }
+    users.reject { |user| user.id == self.id }
 
   end
 
@@ -45,7 +45,7 @@ class User < ApplicationRecord
     param.strip!
     param.downcase!
 
-    (first_name_matches(param) + last_name_matches(param) + email(param)).uniq
+    (first_name_matches(param) + last_name_matches(param) + email_matches(param)).uniq
   end
 
   def self.first_name_matches(param)
@@ -61,7 +61,7 @@ class User < ApplicationRecord
   end
 
   def self.matches(field_name, param)
-    where("lower(#{field_name}) like?", "%#{param}%")
+    where("lower(#{field_name}) like ?", "%#{param}%")
   end
 
 end
