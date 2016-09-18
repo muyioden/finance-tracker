@@ -10,7 +10,9 @@ class UsersController < ApplicationController
     end
 
     def search
-      @user = User.search(params[:search_param])
+      @users = User.search(params[:search_param])
+
+      # render json: @user 
 
       if @users
         @users = current_user.except_current_user(@users)
